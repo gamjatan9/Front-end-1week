@@ -8,26 +8,9 @@
 
 ### ⛑️ 인원
 
-<div style='display:flex; gap: 20px'>
-<div style='display:flex; flex-direction: column; align-items: center;'>
-<a href="https://github.com/kangsinbeom" >
-<img src="https://github.com/kangsinbeom.png" width="100" height="100" style='border-radius: 10px'/>
-</a>
-<span>조장: 강신범<span>
-</div>
-<div style='display:flex; flex-direction: column; align-items: center;'>
-<a href="https://github.com/CJ-1998" >
-<img src="https://github.com/CJ-1998.png" width="100" height="100" style='border-radius: 10px'/>
-</a>
-<span>조원: 강동욱<span>
-</div>
-<div style='display:flex; flex-direction: column; align-items: center;'>
-<a href="https://github.com/gamjatan9" >
-<img src="https://github.com/gamjatan9.png" width="100" height="100" style='border-radius: 10px'/>
-</a>
-<span>조원: 김수현<span>
-</div>
-</div>
+| 조장: 강신범 | 조원: 강동욱 | 조원: 김수현 |
+|:-----------:|:-----------:|:-----------:|
+| [![강신범](https://github.com/kangsinbeom.png)](https://github.com/kangsinbeom) | [![강동욱](https://github.com/CJ-1998.png)](https://github.com/CJ-1998) | [![김수현](https://github.com/gamjatan9.png)](https://github.com/gamjatan9) |
 
 ### 🚗 스터디 목표
 
