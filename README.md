@@ -8,9 +8,9 @@
 
 ### ⛑️ 인원
 
-| 조장: 강신범 | 조원: 강동욱 | 조원: 김수현 |
-|:-----------:|:-----------:|:-----------:|
-| [![강신범](https://github.com/kangsinbeom.png)](https://github.com/kangsinbeom) | [![강동욱](https://github.com/CJ-1998.png)](https://github.com/CJ-1998) | [![김수현](https://github.com/gamjatan9.png)](https://github.com/gamjatan9) |
+|                                  조장: 강신범                                   |                                 조원: 강동욱                                  |                                조원: 김수현                                 |
+| :-----------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
+| [![강신범](https://github.com/kangsinbeom.png)](https://github.com/kangsinbeom) | [![강동욱](https://github.com/woogie0303.png)](https://github.com/woogie0303) | [![김수현](https://github.com/gamjatan9.png)](https://github.com/gamjatan9) |
 
 ### 🚗 스터디 목표
 
