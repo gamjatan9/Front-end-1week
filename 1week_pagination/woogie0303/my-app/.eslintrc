@@ -20,8 +20,9 @@
   ],
   // [rules] 상세 규칙
   "rules": {
+    "import/no-unresolved": "off",
     // var 금지
-    "no-var": "warn",
+    "no-var": "error",
     // 일치 연산자 사용 필수
     "eqeqeq": "warn",
     // 컴포넌트의 props 검사 비활성화, propstype 사용하지 않아도 경고 띄우지 않음
@@ -54,8 +55,6 @@
     "react/prefer-stateless-function": 0,
     "react/jsx-one-expression-per-line": 0,
     "no-nested-ternary": 0,
-    // 파일의 경로가 틀렸는지 확인하는 옵션 false
-    "import/no-unresolved": ["error", { "caseSensitive": false }],
     // props spreading 허용하지 않는 경고 표시
     "react/jsx-props-no-spreading": [1, { "custom": "ignore" }],
     "linebreak-style": 0,

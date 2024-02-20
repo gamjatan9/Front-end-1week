@@ -1,11 +1,14 @@
-import Home from './page/Home';
+import ErrorBoundary from 'components/Error/ErrorBoundary'
+import Home from './page/Home'
 
 function App() {
   return (
     <main className="App">
-      <Home />
+      <ErrorBoundary>
+        <Home />
+      </ErrorBoundary>
     </main>
-  );
+  )
 }
 
-export default App;
+export default App

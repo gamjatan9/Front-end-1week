@@ -7,6 +7,8 @@ type Props = {
 }
 
 const AnimalPostWrapper = styled.div`
+  width: 10rem;
+  height: 10rem;
   img {
     border-radius: 2rem;
     object-fit: cover;
