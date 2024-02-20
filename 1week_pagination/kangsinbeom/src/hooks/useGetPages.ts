@@ -1,14 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import getCurrentPageArray from "../utils/getCurrentPageArray";
+import { usePageContext } from "../contexts/PageContext";
 
 type MoveToPageProps = number | "first" | "last" | "plus" | "minus";
 
 const useGetPages = (limit: number) => {
-  const a = sessionStorage.getItem("selectedPage");
-  const [selectedPage, setSelectedPage] = useState<number>(() => {
-    const storedPage = sessionStorage.getItem("selectedPage");
-    return storedPage ? JSON.parse(storedPage) : 1;
-  });
+  const { selectedPage, setSelectedPage } = usePageContext();
+
   const lastPage = useMemo(() => Math.ceil(limit / 10), [limit]);
   const array = Array.from({ length: lastPage }, (_, index) => index + 1);
   const pageArray = getCurrentPageArray(array, selectedPage);
