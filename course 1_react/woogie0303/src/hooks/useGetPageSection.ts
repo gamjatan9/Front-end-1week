@@ -35,7 +35,6 @@ export const useGetPageSection = () => {
 
   useEffect(() => {
     const { visiblePageStart, visiblePageEnd } = startEndPageBtnHandler(currentPage)
-    console.log(visiblePageStart, visiblePageEnd)
 
     if (nextPageSection) {
       setVisiblePageBtnSection(allPageBtns.slice(visiblePageStart, visiblePageEnd))

@@ -1,7 +1,8 @@
 import * as S from '@styles/components/AnimalPosts'
+import { MAX_IMG_COUNT } from '@utils/Constants'
 
 export const AnimalPostSkeleton = () => {
-  const fallbackItem = Array.from({ length: 10 }, (_, i) => i + 1)
+  const fallbackItem = Array.from({ length: MAX_IMG_COUNT }, (_, i) => i + 1)
   return (
     <S.AnimalPostGridContainer>
       {fallbackItem.map(item => (
