@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
-
-import { usePageContext } from 'contexts/PageContext'
-import { usePageMoveBtn } from 'hooks/usePageMoveBtn'
+import { usePageContext } from '@contexts/PageContext'
+import { usePageMoveBtn } from '@hooks/usePageMoveBtn'
+import * as S from '@styles/components/Pagination'
 import PageBtnList from './PageBtnList'
-
-import * as S from '@/styles/components/Pagination'
 
 function Pagination() {
   const { currentPage } = usePageContext()

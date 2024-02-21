@@ -1,4 +1,4 @@
-import { usePageContext } from 'contexts/PageContext'
+import { usePageContext } from '@contexts/PageContext'
 
 type BtnClickType = 'prev' | 'next'
 

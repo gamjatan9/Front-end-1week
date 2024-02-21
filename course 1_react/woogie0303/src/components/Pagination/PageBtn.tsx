@@ -1,6 +1,6 @@
-import { usePageContext } from 'contexts/PageContext'
+import { usePageContext } from '@contexts/PageContext'
 import React, { MouseEventHandler } from 'react'
-import * as S from '@/styles/components/Pagination'
+import * as S from '@styles/components/Pagination'
 
 type Props = {
   visiblePageBtnNum: number

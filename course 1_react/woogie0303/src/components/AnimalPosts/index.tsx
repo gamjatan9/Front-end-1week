@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import { usePageContext } from 'contexts/PageContext'
+import * as S from '@styles/components/AnimalPosts'
+import { usePageContext } from '@contexts/PageContext'
 import AnimalPost from './AnimalPost'
-import * as S from '@/styles/components/AnimalPosts'
 
 const axiosAnimalApi = axios.create({
   baseURL: process.env.REACT_APP_ANIMAL_API,

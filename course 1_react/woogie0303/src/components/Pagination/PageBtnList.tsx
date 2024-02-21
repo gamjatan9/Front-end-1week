@@ -1,6 +1,6 @@
-import { useGetPageSection } from 'hooks/useGetPageSection'
+import { useGetPageSection } from '@hooks/useGetPageSection'
+import * as S from '@styles/components/Pagination'
 import PagesBtn from './PageBtn'
-import * as S from '@/styles/components/Pagination'
 
 export default function PageBtnList() {
   const visiblePageBtnSection = useGetPageSection()

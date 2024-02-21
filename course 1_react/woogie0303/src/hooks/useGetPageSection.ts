@@ -1,6 +1,6 @@
-import { usePageContext } from 'contexts/PageContext'
+import { usePageContext } from '@contexts/PageContext'
 import { useEffect, useState } from 'react'
-import { MAX_PAGE_COUNT, VISIBLE_PAGE_BUTTONS_NUMBER } from 'utils/Constants'
+import { MAX_PAGE_COUNT, VISIBLE_PAGE_BUTTONS_NUMBER } from '@utils/Constants'
 
 export const useGetPageSection = () => {
   const { currentPage, nextPageSection, setNextPageSection, prevPageSection, setPrevPageSection } = usePageContext()
