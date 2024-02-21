@@ -13,6 +13,7 @@ export default function PageBtn({ visiblePageBtnNum }: Props) {
     const targetValue = Number.parseInt(target.textContent as string, 10)
     setCurrentPage(targetValue)
   }
+
   return (
     <S.PageBtnItem $active={currentPage === visiblePageBtnNum} onClick={handlePageBtn}>
       {visiblePageBtnNum}
