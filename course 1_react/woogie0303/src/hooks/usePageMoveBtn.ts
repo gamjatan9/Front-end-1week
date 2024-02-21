@@ -1,4 +1,5 @@
 import { usePageContext } from '@contexts/PageContext'
+import { VISIBLE_PAGE_BUTTONS_NUMBER } from '@utils/Constants'
 
 type BtnClickType = 'prev' | 'next'
 
@@ -13,11 +14,11 @@ export const usePageMoveBtn = () => {
       setCurrentPage(pre => pre - 1)
     }
 
-    if (btnClick === 'next' && currentPage % 5 === 0) {
+    if (btnClick === 'next' && currentPage % VISIBLE_PAGE_BUTTONS_NUMBER === 0) {
       setNextPageSection(true)
     }
 
-    if (btnClick === 'prev' && currentPage % 5 === 1) {
+    if (btnClick === 'prev' && currentPage % VISIBLE_PAGE_BUTTONS_NUMBER === 1) {
       setPrevPageSection(true)
     }
   }

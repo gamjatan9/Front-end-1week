@@ -14,7 +14,7 @@ export const PageContext = createContext<PageContextType | undefined>(undefined)
 
 export default function PageContextProvider({ children }: { children: React.ReactNode }) {
   const [currentPage, setCurrentPage] = useState(() => {
-    const localCurrentPage = localStorage.getItem('currentPage')
+    const localCurrentPage = sessionStorage.getItem('currentPage')
 
     return localCurrentPage ? Number.parseInt(JSON.parse(localCurrentPage), 10) : 1
   })
