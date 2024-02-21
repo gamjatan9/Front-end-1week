@@ -9,7 +9,11 @@ type PageContextType = {
 export const PageContext = createContext<PageContextType | undefined>(undefined)
 
 export default function PageContextProvider({ children }: { children: React.ReactNode }) {
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(() => {
+    const localCurrentPage = localStorage.getItem('currentPage')
+
+    return localCurrentPage ? Number.parseInt(JSON.parse(localCurrentPage), 10) : 1
+  })
 
   return <PageContext.Provider value={{ currentPage, setCurrentPage }}>{children}</PageContext.Provider>
 }

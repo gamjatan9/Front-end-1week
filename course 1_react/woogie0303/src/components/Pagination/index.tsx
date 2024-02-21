@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { usePageContext } from 'contexts/PageContext'
 import PageBtnList from './PageBtnList'
@@ -49,6 +49,10 @@ function Pagination() {
       setPrevPageSection(true)
     }
   }
+
+  useEffect(() => {
+    localStorage.setItem('currentPage', JSON.stringify(currentPage))
+  }, [currentPage])
 
   return (
     <PaginationContainer $btnprevdisabled={currentPage <= 1} $btnnextdisabled={currentPage >= 20}>
