@@ -1,15 +1,8 @@
-import styled from 'styled-components'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { usePageContext } from 'contexts/PageContext'
 import AnimalPost from './AnimalPost'
-
-const AnimalPostGridContainer = styled.div`
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-`
+import * as S from '@/styles/components/AnimalPosts'
 
 const axiosAnimalApi = axios.create({
   baseURL: process.env.REACT_APP_ANIMAL_API,
@@ -34,8 +27,8 @@ export default function AnimalPosts() {
   })
 
   return (
-    <AnimalPostGridContainer>
+    <S.AnimalPostGridContainer>
       {data?.map(post => <AnimalPost key={post.id} id={post.id} postUrl={post.url} />)}
-    </AnimalPostGridContainer>
+    </S.AnimalPostGridContainer>
   )
 }

@@ -1,21 +1,15 @@
-import styled from 'styled-components'
 import { useGetPageSection } from 'hooks/useGetPageSection'
 import PagesBtn from './PageBtn'
-
-const PageListWrapper = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`
+import * as S from '@/styles/components/Pagination'
 
 export default function PageBtnList() {
   const visiblePageBtnSection = useGetPageSection()
 
   return (
-    <PageListWrapper>
+    <S.PageListWrapper>
       {visiblePageBtnSection.map(visiblePageBtn => (
         <PagesBtn key={visiblePageBtn} visiblePageBtnNum={visiblePageBtn} />
       ))}
-    </PageListWrapper>
+    </S.PageListWrapper>
   )
 }
