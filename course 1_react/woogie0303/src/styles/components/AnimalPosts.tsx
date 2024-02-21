@@ -8,6 +8,7 @@ export const AnimalPostGridContainer = styled.div`
 `
 
 export const AnimalPostWrapper = styled.div`
+  cursor: pointer;
   height: 10rem;
   img {
     border-radius: 2rem;
