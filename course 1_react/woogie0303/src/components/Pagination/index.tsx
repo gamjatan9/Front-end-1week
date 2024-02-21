@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { usePageContext } from 'contexts/PageContext'
+import { usePageMoveBtn } from 'hooks/usePageMoveBtn'
 import PageBtnList from './PageBtnList'
-
-type BtnClickType = 'prev' | 'next'
 
 const PaginationContainer = styled.div<{ $btnprevdisabled: boolean; $btnnextdisabled: boolean }>`
   display: flex;
@@ -29,26 +28,8 @@ const PaginationContainer = styled.div<{ $btnprevdisabled: boolean; $btnnextdisa
 `
 
 function Pagination() {
-  const { currentPage, setCurrentPage } = usePageContext()
-  const [nextPageSection, setNextPageSection] = useState(false)
-  const [prevPageSection, setPrevPageSection] = useState(false)
-  const handleMovePage = (btnClick: BtnClickType) => {
-    if (btnClick === 'next') {
-      setCurrentPage(pre => pre + 1)
-    }
-
-    if (btnClick === 'prev') {
-      setCurrentPage(pre => pre - 1)
-    }
-
-    if (btnClick === 'next' && currentPage % 5 === 0) {
-      setNextPageSection(true)
-    }
-
-    if (btnClick === 'prev' && currentPage % 5 === 1) {
-      setPrevPageSection(true)
-    }
-  }
+  const { currentPage } = usePageContext()
+  const { handleMovePage } = usePageMoveBtn()
 
   useEffect(() => {
     localStorage.setItem('currentPage', JSON.stringify(currentPage))
@@ -59,12 +40,7 @@ function Pagination() {
       <button disabled={currentPage <= 1} type="button" onClick={() => handleMovePage('prev')}>
         이전
       </button>
-      <PageBtnList
-        setNextPageSection={setNextPageSection}
-        setPrevPageSection={setPrevPageSection}
-        nextPageSection={nextPageSection}
-        prevPageSection={prevPageSection}
-      />
+      <PageBtnList />
       <button disabled={currentPage >= 20} type="button" onClick={() => handleMovePage('next')}>
         다음
       </button>

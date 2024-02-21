@@ -4,27 +4,14 @@ import { usePageContext } from 'contexts/PageContext'
 import { MAX_PAGE_COUNT, VISIBLE_PAGE_BUTTONS_NUMBER } from 'utils/Constants'
 import PagesBtn from './PageBtn'
 
-type Props = {
-  setNextPageSection: React.Dispatch<React.SetStateAction<boolean>>
-  setPrevPageSection: React.Dispatch<React.SetStateAction<boolean>>
-
-  nextPageSection: boolean
-  prevPageSection: boolean
-}
-
 const PageListWrapper = styled.ul`
   display: flex;
   align-items: center;
   gap: 1rem;
 `
 
-export default function PageBtnList({
-  setNextPageSection,
-  setPrevPageSection,
-  nextPageSection,
-  prevPageSection,
-}: Props) {
-  const { currentPage } = usePageContext()
+export default function PageBtnList() {
+  const { currentPage, nextPageSection, setNextPageSection, prevPageSection, setPrevPageSection } = usePageContext()
   const pageBtns = Array.from({ length: MAX_PAGE_COUNT }, (_, i) => i + 1)
   const [visiblePageBtns, setVisiblePageBtns] = useState<number[]>([...pageBtns.slice(0, VISIBLE_PAGE_BUTTONS_NUMBER)])
 
