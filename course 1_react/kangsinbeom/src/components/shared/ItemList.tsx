@@ -1,17 +1,20 @@
 import Item from "./Item";
 import Grid from "./Grid";
-import { Dog } from "../../models/dog";
+import useGetDogs from "../../hooks/useGetDogs";
+import withSuspense from "../../hooks/withSuspense";
+import ListSkeleton from "./ListSkeleton";
 
-const ItemList = ({ data }: { data: Dog[] }) => {
-  if (!data) return <>로딩중...</>;
+const ItemList = () => {
+  const { data, isRefetching } = useGetDogs();
+  if (!data) return null;
 
   return (
-    <Grid coulmn="repeat(4, 1fr)" style={{ gap: 20 }}>
-      {data.map(({ url, height, id, width }) => (
-        <Item height={height} width={width} url={url} key={id} />
+    <Grid $coulmn="repeat(5, 1fr)" style={{ gap: 20 }}>
+      {data.map(({ url, id }) => (
+        <Item url={url} key={id} />
       ))}
     </Grid>
   );
 };
 
-export default ItemList;
+export default withSuspense(ItemList, { fallback: <ListSkeleton /> });

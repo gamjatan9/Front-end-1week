@@ -1,10 +1,9 @@
-import { Item as ItemType } from "../../models/item";
 import Flex from "./Flex";
 
-const Item = ({ height, url, width }: Omit<ItemType, "id">) => {
+const Item = ({ url }: { url?: string }) => {
   return (
     <Flex direction="column">
-      <img src={url} alt="" height={300} width={220} />
+      <img src={url as string} alt="" height={300} width={220} />
     </Flex>
   );
 };
