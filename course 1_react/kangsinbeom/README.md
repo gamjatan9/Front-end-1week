@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# 1️⃣ 페이지네이션
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ✅ 내가 적용한 최적화 사항
 
-## Available Scripts
+- useCallback 과 useMemo를 사용한 메모이제이션 (랜더링 성능 개선)
 
-In the project directory, you can run:
+- Suspense와 skeleton UI를 통한 사용자 경험 증가
 
-### `yarn start`
+- prefetch를 통한 데이터 미리 불러오기
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ✅ 공유하고 싶은 기술
 
-### `yarn test`
+- Suspense & usSuspenseQuery (데이터 불러오기 및 사용자 경험 증가)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- HOC 패턴 (가독성 증가)
 
-### `yarn build`
+- hooks 패턴 (관심사 분리)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- tanstack query toolkit
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✅ 공부 방법
 
-### `yarn eject`
+### 📦 Tanstack-query 공식 홈페이지 참고
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- 공식 홈페이지에서 useQuery에 관련된 내용을 찾아서 가지고 있는 속성값에 대해서 천천히 살펴보았음.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 적용가능한 부분 혹은 필요하다 생각되는 부분에 대해서 적용을 하였음
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- suspense를 통해서 사용자 경험을 올릴 수 있을 것이라고 생각되어서 새롭게 suspense를 적용할 수 있는 방법을 찾아보았음
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- useSuspencseQuery를 통해서 새롭게 코드를 구현
 
-## Learn More
+### 📦 Chat GPT를 활용한 에러문 검증
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 에러 문구 및 코드를 보고 이해가 가지 않는다면 Chat GPT에 검색 후 구글링을 통하여 교차로 검증하면서 에러문에 대해 해결 방안을 찾으려 노력하였음
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 에러문에 나온 키워드를 살펴보면서 해결 방법을 강구하였음
