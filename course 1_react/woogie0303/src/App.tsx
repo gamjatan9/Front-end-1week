@@ -1,4 +1,4 @@
-import ErrorBoundary from 'components/Error/ErrorBoundary'
+import ErrorBoundary from '@components/Error/ErrorBoundary'
 import Home from './page/Home'
 
 function App() {
