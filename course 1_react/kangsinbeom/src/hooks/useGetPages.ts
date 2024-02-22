@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo } from "react";
 import getCurrentPageArray from "../utils/getCurrentPageArray";
 import { usePageContext } from "../contexts/PageContext";
 
@@ -18,21 +18,24 @@ const useGetPages = (limit: number) => {
       } else if (input === "first") {
         setSelectedPage(1);
       } else if (input === "plus") {
+        if (selectedPage >= lastPage) return setSelectedPage(lastPage);
         setSelectedPage((prev) => prev + 1);
       } else if (input === "minus") {
+        if (selectedPage < 1) return setSelectedPage(1);
         setSelectedPage((prev) => prev - 1);
       } else {
         setSelectedPage(input);
       }
     },
-    [lastPage]
+    [lastPage, selectedPage, setSelectedPage]
   );
   useEffect(() => {
     sessionStorage.setItem("selectedPage", JSON.stringify(selectedPage));
   }, [selectedPage]);
 
-  return { selectedPage, moveToPage, pageArray } as {
+  return { selectedPage, lastPage, moveToPage, pageArray } as {
     selectedPage: number;
+    lastPage: number;
     moveToPage: (number: MoveToPageProps) => void;
     pageArray: number[];
   };
