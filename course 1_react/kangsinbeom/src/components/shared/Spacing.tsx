@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface SpacingProps {
-  backgroundColor?: string;
+  $backgroundcolor?: string;
   size: number;
   direction?: "vertical" | "horizontal";
 }
@@ -9,7 +9,7 @@ interface SpacingProps {
 const Spacing = styled.div<SpacingProps>`
   ${({ size, direction = "vertical" }) =>
     direction === "vertical" ? `height: ${size}px;` : `width: ${size}px;`}
-  ${({ backgroundColor }) =>
-    backgroundColor && `background-color: ${backgroundColor};`}
+  ${({ $backgroundcolor }) =>
+    $backgroundcolor && `background-color: ${$backgroundcolor};`}
 `;
 export default Spacing;
