@@ -2,8 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { QueryClient, QueryClientProvider } from "react-query";
 import PageContextProvider from "./contexts/PageContext";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { GlobalStyle } from "./globalStyles";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,11 +13,13 @@ const root = ReactDOM.createRoot(
 const queryClient = new QueryClient();
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <PageContextProvider>
+    <GlobalStyle />
+    <PageContextProvider>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools initialIsOpen={false} />
         <App />
-      </PageContextProvider>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </PageContextProvider>
   </React.StrictMode>
 );
 
